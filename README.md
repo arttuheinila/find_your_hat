@@ -1,6 +1,6 @@
-#FIND YOUR HAT GAME
+# FIND YOUR HAT GAME
 
-This is an interactive game by Codecademy. You (as the player) need to find your hat without falling into holes.
+This is an interactive terminal game. You (as the player) need to find your hat without falling into holes.
 
 Run by using main.js in terminal.
 
