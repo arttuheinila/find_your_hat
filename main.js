@@ -9,22 +9,16 @@ const pathCharacter = '*';
 class Field {
     constructor(field) {
         this.field = field;
-    }
-
-
+    }    
     //Print the field
     print(){
         for (let i=0; i<this.field.length; i++){
             console.log(this.field[i].join(""));
         }
-    }
-
-    
-        
+    }    
 }
 
 //Generate new field
-
 generateField = (height, width, holePercentage) => {
         const field = [];
         //set locations for hole and field characters
@@ -54,30 +48,22 @@ generateField = (height, width, holePercentage) => {
         return field;
       }
 
-
-
 play = () => {
 //Display field
 
     myField.print()
-
     //const name = prompt('What is your name?');
     console.log('MOVING: u for up, d for down, l for left, r for right')
-
     // Initial setup of the board
     let gameState = ''
     var i = 0, j = 0
-
-
     while (gameState != 'loss!' || gameState != 'win!') {
         //Current position
         let currentPosition = myField.field[i][j]
         //Move
         let move = prompt('Choose a move : ')
-        //test 
-        //DO WE NEED THIS? IS IT THE TRAIL? TOOK OFF WITHOUT FAULTS
         myField.field[i][j] = pathCharacter 
-
+        
         //Move the character and test for valid moves
         if (move === 'u') {
             i --
@@ -94,9 +80,7 @@ play = () => {
         } else {
             console.log('Incorrect input. You need to type "u", "d" "l" or "r"')
             break
-            //**DO A WHILE STATEMENT TO CATCH AND FORCE TO MAKE NEW MOVE, OTHERWISE YOU WILL LOSE THE GAME!
         }     
-        
         //Losing moves
         if (i < 0 || j < 0 || newPosition == hole || newPosition == pathCharacter) {
             gameState == 'loss!'
@@ -115,7 +99,6 @@ play = () => {
         myField.field[i][j] = pathCharacter
         console.clear()
         myField.print()
-        //VAI PÄINVASTOIN
         }
     }
 }
@@ -132,5 +115,4 @@ if (width === '') {
 
 //Set up new board
 let myField = new Field(generateField(height, width, 30))
-
-play()
+play(
