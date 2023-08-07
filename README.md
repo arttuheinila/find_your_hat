@@ -1,4 +1,4 @@
-# FIND YOUR HAT GAME
+# Find Your Hat Terminal Game
 
 This is an interactive terminal game. You (as the player) need to find your hat without falling into holes.
 
